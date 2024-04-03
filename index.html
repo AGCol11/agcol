@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Blog</title>
+    <title>AGCol On Top</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f9f9f9;
+            color: #333;
             text-align: center;
             padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
         }
 
         header {
@@ -17,36 +22,37 @@
             color: #fff;
             padding: 10px 0;
             margin-bottom: 20px;
+            width: 100%;
         }
 
-        .section {
-            display: inline-block;
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .project-box {
             background-color: #ffcc00;
             color: #333;
-            padding: 10px;
-            border-radius: 10px;
+            padding: 20px;
+            border-radius: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin: 10px;
-            width: 200px;
-            text-align: left;
-            position: relative;
         }
 
-        .section::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -10px;
-            border: 10px solid transparent;
-            border-left-color: #ffcc00;
-            transform: translateY(-50%);
+        .project-box img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
 
-        .section:hover {
-            transform: scale(1.1);
+        .project-box:nth-child(odd) {
+            background-color: #ff6666;
         }
 
-        .center {
-            margin: 0 auto;
+        .project-box:nth-child(even) {
+            background-color: #66ccff;
         }
     </style>
 </head>
@@ -56,21 +62,32 @@
         </h1>
     </header>
 
-    <a href="aboutme.html" style="text-decoration: none; color: inherit;">
-      <section class="section center" style="top: 10%;">
-          <h2>About Me</h2>
-          <p>Click here to learn more about me.</p>
-      </section>
-  </a>
+    <div class="project-box">
+        <img src="project1.jpg" alt="Project 1">
+        <h2>Project 1</h2>
+        <p>Description of Project 1</p>
+    </div>
 
-  <a href="projects.html" style="text-decoration: none; color: inherit;">
-    <section class="section center" style="bottom: 10%;">
-        <h2>My Projects</h2>
-        <p>Click here to learn about my projects.</p>
-    </section>
+    <div class="project-box">
+        <img src="project2.jpg" alt="Project 2">
+        <h2>Project 2</h2>
+        <p>Description of Project 2</p>
+    </div>
+
+    <div class="project-box">
+        <img src="project3.jpg" alt="Project 3">
+        <h2>Project 3</h2>
+        <p>Description of Project 3</p>
+    </div>
+
+    <div class="project-box">
+        <img src="project4.jpg" alt="Project 4">
+        <h2>Project 4</h2>
+        <p>Description of Project 4</p>
+    </div>
 
     <footer>
-        <p>&copy; 2024 AGCol</p>
+        <p>&copy; 2023 Your Name</p>
     </footer>
 </body>
 </html>
