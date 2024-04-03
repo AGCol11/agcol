@@ -30,6 +30,17 @@
             margin-bottom: 20px;
         }
 
+        .blue-box {
+            background-color: #add8e6;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px; /* Set a maximum width */
+            margin: 0 auto; /* Center the box horizontally */
+            text-align: center;
+        }
+
+
         .project-box {
             background-color: #ffcc00;
             color: #333;
@@ -40,6 +51,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin: 10px;
             transition: transform 0.3s;
+            position: relative;
         }
 
         .project-box img {
@@ -52,12 +64,22 @@
             transform: scale(1.1);
         }
 
-        .project-box:nth-child(odd) {
-            background-color: #ff6666;
+        .project-box::before {
+            content: 'Click me!';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
         }
 
-        .project-box:nth-child(even) {
-            background-color: #66ccff;
+        .project-box:hover::before {
+            opacity: 1;
         }
     </style>
 </head>
@@ -67,6 +89,9 @@
         </h1>
     </header>
 
+    <div class="blue-box">
+        <h1>Below are some of my most recent and in-depth creations that I have made which I feel will best give you an understanding of what you can expect when purchasing any form of bot from myself!<br><br>These are the bots that I have randomly selected so that you know the quality you will be given when you purchase a bot from myself! </h1>
+</div>
     <a href="project1.html" class="project-box">
         <img src="HPR.png" alt="Project 1">
         <h2>HPR Core</h2>
@@ -80,19 +105,16 @@
     </a>
 
     <a href="project3.html" class="project-box">
-        <img src="project3.jpg" alt="Project 3">
-        <h2>Project 3</h2>
+        <img src="HDL.png" alt="Project 3">
+        <h2>HDL Core</h2>
         <p>Description of Project 3</p>
     </a>
 
-    <a href="project4.html" class="project-box">
-        <img src="project4.jpg" alt="Project 4">
-        <h2>Project 4</h2>
-        <p>Description of Project 4</p>
+    <a href="https://www.fiverr.com/s/bNreEX" target="_blank" class="project-box">
+        <img src="BUYBOY.png" alt="Project 4">
+        <h2>Buy your bot here!</h2>
+        <p>Interested in what you see? Click here to purchase a bot from me today!</p>
     </a>
 
-    <footer>
-        <p>&copy; 2024 AGCol</p>
-    </footer>
 </body>
 </html>
