@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG On Top</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .blue-box {
+            background-color: #add8e6;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px; /* Set a maximum width */
+            margin: 0 auto; /* Center the box horizontally */
+            text-align: center;
+        }
+
+
+        .project-box {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 20px;
+            border-radius: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .project-box img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .project-box:hover {
+            transform: scale(1.1);
+        }
+
+        .project-box::before {
+            content: 'Click me!';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .project-box:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AGCol<h2>JavaScript & HTML Developer</h2>
+        </h1>
+    </header>
+
+        <h2>Recent Creations:</h2>
+    
+    <a href="project1.html" class="project-box">
+        <img src="HPR.png" alt="Project 1">
+        <h2>HPR Core</h2>
+        <p>The core of one of the most popular F1 racing leagues!</p>
+    </a>
+
+    <a href="project2.html" class="project-box">
+        <img src="HPR.png" alt="Project 2">
+        <h2>HPR Tickets</h2>
+        <p>Flawless ticket bot!</p>
+    </a>
+
+    <a href="project3.html" class="project-box">
+        <img src="HDL.png" alt="Project 3">
+        <h2>HDL Core</h2>
+        <p>The core of one of quickest growing Esport Teams!</p>
+    </a>
+
+    <a href="https://www.fiverr.com/s/bNreEX" target="_blank" class="project-box">
+        <img src="BUYBOY.png" alt="Project 4">
+        <h2>Buy your bot here!</h2>
+        <p>Interested in what you see? Click here to purchase a bot from me today!</p>
+    </a>
+
+</body>
+</html>
