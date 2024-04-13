@@ -33,23 +33,55 @@
             text-decoration: none; /* Remove underline */
         }
 
-        .project-box {
-            background-color: lightblue;
-            color: #333;
-            padding: 20px;
-            border-radius: 20px;
-            width: 300px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            transition: transform 0.3s;
-        }
+        .project-box h2 {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
 
-        .project-box img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
+        .project-box {
+    background-color: lightblue;
+    color: #333;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: transform 0.3s, opacity 0.5s; /* Add opacity transition */
+}
+
+.current-projects .project-box {
+    animation: pop-up 0.5s ease 0.5s forwards;
+}
+
+.past-projects .project-box:nth-child(1) {
+    animation: pop-up 0.5s ease 1.0s forwards;
+}
+
+.past-projects .project-box:nth-child(2) {
+    animation: pop-up 0.5s ease 1.5s forwards;
+}
+
+.past-projects .project-box:nth-child(3) {
+    animation: pop-up 0.5s ease 2.0s forwards;
+}
+
+.project-box img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Animation for popping up one at a time */
+.project-box:nth-child(1) { animation: pop-up 0.5s ease 0.5s forwards; }
+.project-box:nth-child(2) { animation: pop-up 0.5s ease 1s forwards; }
+.project-box:nth-child(3) { animation: pop-up 0.5s ease 1.5s forwards; }
+
+@keyframes pop-up {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
 
         .project-box:hover {
             transform: scale(1.1);
@@ -63,15 +95,22 @@
         }
 
         .past-project-box {
-            background-color: #f0f0f0;
-            color: #333;
-            padding: 20px;
-            border-radius: 20px;
-            width: 300px;
-            text-align: center;
-            margin: 10px;
-        }
+    background-color: lightblue;
+    color: #333;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: transform 0.3s, opacity 0.5s; /* Add opacity transition */
+}
+
+
     </style>
+
+    
 </head>
 <body>
     <header>
@@ -82,7 +121,7 @@
     <h2>Current Projects</h2>
     <div class="current-projects">
         <div class="project-box">
-            <a href="ideologies.html" target="_blank">
+            <a href="ideologies.html">
                 <img src="IDEOLOGIES.png" alt="IDEOLOGIES CORE">
                 <h2>IDEOLOGIES Core Bot</h2>
             </a>
@@ -93,21 +132,21 @@
     <!-- Past Projects Section -->
     <h2>Past Projects</h2>
     <div class="past-projects">
-        <div class="past-project-box">
+        <div class="project-box">
             <a href="project1.html">
                 <img src="HPR.png" alt="Project 1">
                 <h2>HPR Core</h2>
             </a>
         </div>
 
-        <div class="past-project-box">
+        <div class="project-box">
             <a href="project2.html">
                 <img src="HPR.png" alt="Project 2">
                 <h2>HPR Tickets</h2>
             </a>
         </div>
 
-        <div class="past-project-box">
+        <div class="project-box">
             <a href="project3.html">
                 <img src="HDL.png" alt="Project 3">
                 <h2>HDL Core</h2>
