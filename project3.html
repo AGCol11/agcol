@@ -150,10 +150,26 @@
         <h1>HDL Core</h1>
     </header>
 
-    <div class="project-info">
+<div class="project-info">
         <img src="HDL.png" alt="Project 1 - HPR Core">
-        <p>The HDL core bot was the bot that really allowed me to unlock my creative freedom. This bot was the first bot where I felt like I had freedom which excelled my learning capabilities making me so much better at making bots efficiently and to a high standard. This bot made users lives so much easier as they could type in a simple command rather than searching through the entire server for something they need.</p>
+        <p id="demo"></p>
     </div>
+    
+    <script>
+    var i = 0;
+    var txt = 'The HDL core bot was the bot that really allowed me to unlock my creative freedom. This bot was the first bot where I felt like I had freedom which excelled my learning capabilities making me so much better at making bots efficiently and to a high standard. This bot made users lives so much easier as they could type in a simple command rather than searching through the entire server for something they need.'; /* The text */
+    var speed = 2; /* The speed/duration of the effect in milliseconds */
+    
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    
+    typeWriter();
+    </script>
     <br>
     <p1> The code below is only snippets of code.</p1>
 
